@@ -99,4 +99,4 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 	
 	
 
-client.login('');
+client.login(process.env.BOT_TOKEN);

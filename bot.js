@@ -1,5 +1,9 @@
 const Discord = require("discord.js");
+cconst Discord = require("discord.js");
 const client = new Discord.Client();
+
+
+
 
 
 client.on('guildMemberAdd', member => {
@@ -39,19 +43,7 @@ client.on('guildMemberAdd', member => {
     channel.send({embed : embed});
     })
 	
-	const invites = {};
-
-const wait = require('util').promisify(setTimeout);
-
-client.on('ready', () => {
-  wait(1000);
-
-  client.guilds.forEach(g => {
-    g.fetchInvites().then(guildInvites => {
-      invites[g.id] = guildInvites;
-    });
-  });
-});
+	
 
 client.on('guildMemberAdd', member => {
   member.guild.fetchInvites().then(guildInvites => {
@@ -65,12 +57,6 @@ client.on('guildMemberAdd', member => {
 });
 
 
-```client.on("ready", () => { // كود رينبو
-  function lol() {
-    client.guilds.get('520623122550882345').roles.find("Rainbow", "Rainbow").setColor("RANDOM");
-  };
-  setInterval(lol, 1000);
-});
 
 	const adminprefix = "A";
 const devs = ['408518562521546764'];

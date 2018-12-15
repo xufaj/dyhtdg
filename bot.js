@@ -1,9 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "-";
-
-const Discord = require("discord.js");
-const client = new Discord.Client();
 
 
 client.on('guildMemberAdd', member => {
